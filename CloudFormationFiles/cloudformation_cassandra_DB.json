@@ -184,38 +184,6 @@
                 }
             }
         },
-        "Cassandra4": {
-            "Type": "AWS::EC2::Instance",
-            "Properties": {
-                "AvailabilityZone": "us-east-1a",
-                "ImageId": {
-                    "Fn::FindInMap": [
-                        "AWSRegionToAMI",
-                        {
-                            "Ref": "AWS::Region"
-                        },
-                        "AMI"
-                    ]
-                },
-                "InstanceType": {
-                    "Ref": "InstanceType"
-                },
-                "KeyName": {
-                    "Ref": "KeyName"
-                },
-                "SecurityGroups": [
-                    {
-                        "Ref": "SSHSecurityGroup"
-                    },
-                    {
-                        "Ref": "CassandraSecurityGroup"
-                    }
-                ],
-                "UserData": {
-                    "Fn::Base64": "#!/bin/bash\necho \"US/Pacific\" > /etc/timezone\nadd-apt-repository ppa:openjdk-r/ppa\napt-get update\napt-get install vim curl zip unzip git python-pip -y -q\n# Java install - adjust if needed\napt-get install openjdk-8-jdk -y -q\n#install cassandra\necho \"deb http://www.apache.org/dist/cassandra/debian 311x main\" | sudo tee -a /etc/apt/sources.list.d/cassandra.sources.list\ncurl https://www.apache.org/dist/cassandra/KEYS | sudo apt-key add -\napt-get update\napt-get install cassandra -y\n"
-                }
-            }
-        },
         "CassandraIP1": {
             "Type": "AWS::EC2::EIP",
             "Properties": {
@@ -237,14 +205,6 @@
             "Properties": {
                 "InstanceId": {
                     "Ref": "Cassandra3"
-                }
-            }
-        },
-        "CassandraIP4": {
-            "Type": "AWS::EC2::EIP",
-            "Properties": {
-                "InstanceId": {
-                    "Ref": "Cassandra4"
                 }
             }
         },
