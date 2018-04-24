@@ -1,1 +1,1 @@
-# ProjectOps - final project - 2018
+# ProjectSpree - final Devops project - 2018
