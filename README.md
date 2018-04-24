@@ -42,10 +42,10 @@ Create a directory named inventory and a file named hosts under inventory folder
 
 ```
 [masters]
-<public ip instance1> ansible_user=ubuntu ansible_private_key_file=/path-to-your-keyfile/docker-key.pem
+<public ip instance1> ansible_user=ubuntu ansible_private_key_file=/path-to-your-keyfile/liranew.pem
 [workers]
-<public ip instance2> ansible_user=ubuntu ansible_private_key_file=/path-to-your-keyfile/docker-key.pem
-<public ip instance3> ansible_user=ubuntu ansible_private_key_file=/path-to-your-keyfile/docker-key.pem
+<public ip instance2> ansible_user=ubuntu ansible_private_key_file=/path-to-your-keyfile/liranew.pem
+<public ip instance3> ansible_user=ubuntu ansible_private_key_file=/path-to-your-keyfile/liranew.pem
 ```
 
 
