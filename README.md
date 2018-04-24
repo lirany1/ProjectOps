@@ -8,20 +8,21 @@ A node in a swarm cluster is any machine with docker engine installed and capabl
 Step-1
 In this post we can see how to install Terraform and how to setup the AWS account for working ahead. After installing Terraform and setting up AWS account go to the next step.
 NOTE: You need to create and download a key-pair using aws management console. Mine is : docker-key.pem
-```
+
 Step-2
 Create a directory named swarm-deploy. create three files named variable.tf, security-groups.tf, main.tf and output.tf.
 In variable.tf file I’m using region us-east-1 and Ubuntu-16.04 amazon machine image. You can set yours… :)
 In output.tf file add the following
+```
 aws_instance.master.public_ip
 aws_instance.worker1.public_ip
 aws_instance.worker2.public_ip
 ```
 
 Step-3
-Create a shell script named install_docker_machine_compose.sh which will install docker. This script will execute in the provision time of EC2…
+Create a shell script named install_docker_machine_compose.sh which will install docker. This script will execute in the provision time of EC2
 
-```
+
 Step-4
 Install Ansible
 
@@ -31,7 +32,7 @@ Press ENTER to accept the PPA addition.
 $ sudo apt-get update
 $ sudo apt-get install ansible
 ```
-```
+
 Step-5
 There are a couple of ways of setting up a swarm cluster. The number of hosts running in a swarm cluster will be restricted to the host’s CPU and memory capacity.Setting up swarm environment is by using hosted environments like AWS.
 
