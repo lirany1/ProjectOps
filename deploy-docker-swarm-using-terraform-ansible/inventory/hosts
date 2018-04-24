@@ -1,0 +1,8 @@
+[masters]
+184.72.118.159 ansible_user=ubuntu ansible_private_key_file=/home/liran/Desktop/liranew.pem
+#ansible_private_key_file=/home/ratul/developments/devops/keyfile/docker-key.pem
+
+[workers]
+#ansible_user=ubuntu
+34.203.191.255 ansible_user=ubuntu ansible_private_key_file=/home/liran/Desktop/liranew.pem
+54.159.161.144 ansible_user=ubuntu ansible_private_key_file=/home/liran/Desktop/liranew.pem
