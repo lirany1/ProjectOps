@@ -7,7 +7,7 @@ A node in a swarm cluster is any machine with docker engine installed and capabl
 
 Step-1
 In this post we can see how to install Terraform and how to setup the AWS account for working ahead. After installing Terraform and setting up AWS account go to the next step.
-NOTE: You need to create and download a key-pair using aws management console. Mine is : docker-key.pem
+NOTE: You need to create and download a key-pair using aws management console. Mine is : liranew.pem
 
 Step-2
 Create a directory named swarm-deploy. create three files named variable.tf, security-groups.tf, main.tf and output.tf.
