@@ -1,5 +1,4 @@
-# ProjectOps
-# final project - 2018
+# ProjectOps - final project - 2018
 
 # docker-spree
 This image installs [Spree Commerce](http://spreecommerce.com/), an open-source, e-commerce Rails application. 
