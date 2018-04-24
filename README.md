@@ -22,22 +22,10 @@ Ruby on Rails     | see [docker-rails-base](https://github.com/dell-cloud-market
 ## Usage
 
 ### 1. Start the Container
-If you wish to create data volumes, which will survive a restart or recreation of the container, please follow the instructions in [Advanced Usage](#advanced-usage).
-
-#### A. Basic Usage
-Start the container with:
-
-* A named container ("spree")
-* Ports 80, 443 (Nginx) and 3306 (MySQL) exposed
-
-As follows:
-
-```no-highlight
-sudo docker run -d -p 80:80 -p 443:443 -p 3306:3306 --name spree dell/spree
-```
+Create data volumes, which will survive a restart or recreation of the container
 
 <a name="advanced-usage"></a>
-#### B. Advanced Usage
+#### Advanced Usage
 Start your container with:
 
 * A named container ("spree")
